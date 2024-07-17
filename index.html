@@ -19,25 +19,50 @@
 <body class="bg-Red md:bg-[url('./assets/images/bg-intro-desktop.png')] bg-[url('./assets/images/bg-intro-mobile.png')] flex items-center justify-center md:h-screen">
   <!-- Intro Component With Sign Up Form -->
    <section class="container mx-auto flex md:flex-row flex-col items-center justify-center my-4">
+    <!-- Content Section -->
     <div class="flex flex-col justify-center md:mx-20 mx-14 md:w-1/2 md:text-left text-center">
+      <!-- Header -->
       <h1 class="text-white md:text-6xl text-3xl font-bold mt-10">
         Learn to code by watching others
       </h1>
+      <!-- Paragraph -->
       <p class="text-white font-semibold text-base my-6">
         See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
         but understanding how developers think is invaluable. 
       </p>
     </div>
     <div class="flex flex-col justify-center mx-14 md:w-1/2">
+      <!-- Form Section -->
       <div class="bg-Blue shadow-lg shadow-DarkBlue px-2 py-5 rounded-md text-center my-6">
         <p class="text-white font-normal"><span class="font-semibold">Try it free 7 days</span> then $20/mo. thereafter</p>
       </div>
-      <form class="bg-white flex flex-col p-9 rounded-lg">
-        <input type="text" placeholder="First Name" class="my-2 px-4 py-2 font-semibold border border-GrayishBlue placeholder-GrayishBlue rounded-md">
-        <input type="text" placeholder="Last Name" class="my-2 px-4 py-2 font-semibold border border-GrayishBlue placeholder-GrayishBlue rounded-md">
-        <input type="text" placeholder="Email Address" class="my-2 px-4 py-2 font-semibold border border-GrayishBlue placeholder-GrayishBlue rounded-md">
-        <input type="password" placeholder="Password" class="my-2 px-4 py-2 font-semibold border border-GrayishBlue placeholder-GrayishBlue rounded-md">
-        <button class="bg-Green text-white font-bold uppercase shadow-md shadow-Green py-4 rounded-md my-2">Claim your free trial</button>
+      <form id="signup-form" class="bg-white flex flex-col p-9 rounded-lg">
+        <!-- First Name Field -->
+        <div class="relative flex flex-col">
+          <input id="first-name" type="text" placeholder="First Name" class="my-2 px-4 py-2 font-semibold focus:outline-none focus:border-GrayishBlue border border-GrayishBlue placeholder-GrayishBlue rounded-md">
+          <img id="first-name-error-icon" src="assets/images/icon-error.svg" alt="Error Icon" class="hidden w-[25px] absolute top-[17px] right-[12px]">
+          <p id="first-name-error-message" class="hidden text-right text-xs text-Red font-medium italic">First Name cannot be empty</p>
+        </div>
+        <!-- Last Name Field -->
+        <div class="relative flex flex-col">
+          <input id="last-name" type="text" placeholder="Last Name" class="my-2 px-4 py-2 font-semibold focus:outline-none focus:border-GrayishBlue border border-GrayishBlue placeholder-GrayishBlue rounded-md">
+          <img id="last-name-error-icon" src="assets/images/icon-error.svg" alt="Error Icon" class="hidden w-[25px] absolute top-[17px] right-[12px]">
+          <p id="last-name-error-message" class="hidden text-right text-xs text-Red font-medium italic">Last Name cannot be empty</p>
+        </div>
+        <!-- Email Field-->
+        <div class="relative flex flex-col">
+          <input id="email" type="text" placeholder="Email Address" class="my-2 px-4 py-2 font-semibold focus:outline-none focus:border-GrayishBlue border border-GrayishBlue placeholder-GrayishBlue rounded-md">
+          <img id="email-error-icon" src="assets/images/icon-error.svg" alt="Error Icon" class="hidden w-[25px] absolute top-[17px] right-[12px]">
+          <p id="email-error-message" class="hidden text-right text-xs text-Red font-medium italic">Looks like this is not an email</p>
+        </div>
+        <!-- Password Field -->
+        <div class="relative flex flex-col">
+          <input id="password" type="password" placeholder="Password" class="my-2 px-4 py-2 font-semibold focus:outline-none focus:border-GrayishBlue border border-GrayishBlue placeholder-GrayishBlue rounded-md">
+          <img id="password-error-icon" src="assets/images/icon-error.svg" alt="Error Icon" class="hidden w-[25px] absolute top-[17px] right-[12px]">
+          <p id="password-error-message" class="hidden text-right text-xs text-Red font-medium italic">Password cannot be empty</p>
+        </div>
+        <!-- Submit Button-->
+        <button id="submit-btn" type="button" class="bg-Green text-white font-bold uppercase shadow-md shadow-Green py-3 rounded-md my-4">Claim your free trial</button>
         <span class="text-GrayishBlue md:text-sm text-xs text-center my-2">By clicking the button, you are agreeing to our <span class="text-Red font-bold cursor-pointer">Terms and Services</span></span>
       </form>
     </div>
